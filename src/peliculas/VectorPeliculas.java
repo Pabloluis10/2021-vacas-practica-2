@@ -50,4 +50,8 @@ public class VectorPeliculas {
         System.out.println("========== Las películas se han ordenado en forma ascendente según el nombre ==========");
         mostrarPeliculas();
     }
+
+    public Pelicula[] getPeliculas(){
+        return peliculas;
+    }
 }
