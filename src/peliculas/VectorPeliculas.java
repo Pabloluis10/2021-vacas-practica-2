@@ -24,9 +24,17 @@ public class VectorPeliculas {
         String categoria = entrada.nextLine();
         System.out.print("Ingrese el año de la película: ");
         int año = entrada.nextInt();
-
-        //creamos pelicula
-        peliculas[siguienteCodigo] = new Pelicula(siguienteCodigo, nombre, año, categoria, true);
+       //creamos pelicula
+        peliculas[siguienteCodigo] = new Pelicula((siguienteCodigo+1), nombre, año, categoria, true);
         siguienteCodigo++;
     }
+
+    public void mostrarPeliculas(){
+        System.out.println("=========== Las películas de memorambialia ==========");
+        for(int i=0; i<siguienteCodigo; i++){
+            System.out.println("-> "+(i+1)+ ": "+peliculas[i].getInformacionPeli());
+        }
+    }
+
+    
 }
