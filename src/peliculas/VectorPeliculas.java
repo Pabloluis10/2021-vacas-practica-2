@@ -31,10 +31,23 @@ public class VectorPeliculas {
 
     public void mostrarPeliculas(){
         System.out.println("=========== Las películas de memorambialia ==========");
-        for(int i=0; i<siguienteCodigo; i++){
+        for(int i=0; i<=siguienteCodigo; i++){
             System.out.println("-> "+(i+1)+ ": "+peliculas[i].getInformacionPeli());
         }
+        System.out.println("\n\n");
     }
 
-    
+    public void oredenarAscendente(){
+        //metodo por inserción 
+        for(int i=0; i<=siguienteCodigo; i++){
+            Pelicula aux = peliculas[i];
+            int pos=0;
+            while(pos>0 && (peliculas[pos-1].getNombre().compareToIgnoreCase(aux.getNombre()))>0 ){
+                peliculas[pos] = peliculas[pos-1];
+                pos--;
+            }
+        }
+        System.out.println("========== Las películas se han ordenado en forma ascendente según el nombre ==========");
+        mostrarPeliculas();
+    }
 }
