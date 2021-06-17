@@ -67,6 +67,7 @@ public class VectorClientes {
 
     }
 
-
-    
+    public Cliente[] getClientes(){
+        return clientes;
+    }
 }
