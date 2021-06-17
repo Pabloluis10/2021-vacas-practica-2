@@ -58,4 +58,9 @@ public class Pelicula {
     public boolean getDisponible(){
         return disponible;
     }
+
+    public String getInformacionPeli(){
+        String resultado = "Id: "+id+" Nombre de la película: "+nombre+" Categoria: "+categoria+" Año: "+año+" Disponible: "+disponible;
+        return resultado;
+    }
 }
